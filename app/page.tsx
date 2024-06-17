@@ -1,113 +1,594 @@
-import Image from "next/image";
+ 'use client'
+ import Nvbr from "@/components/Nvbr";
+import JSIcon from "@/components/ui/Icons";
+import Link from "next/link";
+import { buttonVariants } from '@/components/ui/Button'
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import {  BookCopy, Kanban,  Key,  LinkIcon, MoveDown} from "lucide-react";
+import { Card } from "@/components/ui/card";
+import DropdownDiv from "@/components/buttondiv/DropdownDiv";
+import FourImageGallery from "@/components/accadamics/FourImageGallery";
+import LoyolaDifference from "@/components/accadamics/LoyolaDifference";
+import PercentageCard from "@/components/accadamics/percentagecard/PercentageCard";
+import CardView from "@/components/accadamics/CardView";
+import CardViewOne from "@/components/CardViewOne";
+import StudentVoice from "@/components/accadamics/StudentVoice";
+import ReadytoLearn from "@/components/accadamics/ReadytoLearn";
+import { REM } from "next/font/google";
+import NewsCard from "@/components/accadamics/NewsCard";
+import BgVideo from "@/components/accadamics/BgVideo";
+import FutureGreyhounds from "@/components/FutureGreyhounds";
 
-export default function Home() {
+
+
+
+export default function Home(): JSX.Element {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const menuData: any = [{
+    key: 1,
+    header:"UNDERGRADUATE STUDIES",
+    title2:"LEARN ABOUT LOYOLA",
+    title1:[{
+      titlename:"LEARN ABOUT LOYOLA",
+    },{
+      titlename:"ACADEMIC PROGRAMS",
+    },{
+      titlename:"ADMISSION",
+    }],
+    menu:[{
+      key: 1,
+      title:"LEARN ABOUT LOYOLA",
+      submenu:[{
+        name:"Visit Opportunities",
+        link:"",
+      },
+      {
+        name:"Virtual Tour",
+        link:"",
+      },
+      {
+        name:"Send me information",
+        link:"",
+      },{
+        name:"Speak to an admission Counsselor",
+        link:"",
+      }]
+    },
+    {
+      key: 2,
+      title:"ACADEMIC PROGRAMS",
+      submenu:[{
+        name:"Majors and Minors",
+        link:"",
+      },{
+        name:"Combined Bachelor/Master Programs",
+        link:"",
+      },],
+      submenu1:{
+        title:"Pre-Professional Programs",
+        division:[{
+        title:"law",
+      },
+      {
+        title:"medical",
+      },
+      {
+        title:"Dental",
+      },
+      {
+        title:"Pre-nursing",
+      },
+      {
+        title:"physician Assistant",
+      },
+      {
+        title:"Othet Pre-Health Tracks",
+      }]}
+    },{
+      key: 3,
+      title:"ADMISSION",
+      submenu:[{
+        name:"First-year Applicants",
+        link:"",
+      },
+      {
+        name:"International Applicants",
+        link:"",
+      },
+      {
+        name:"Transfer Applicants",
+        link:"",
+      },{
+        name:"Undocumented & DACA Applicants",
+        link:"",
+      },
+      {
+        name:"Finantial Aid & Affordability",
+        link:"",
+      }]
+    }],
+
+  },{
+    key: 2,
+    header:"GRADUATE STUDIES",
+    title1:[{
+       titlename:"ARTS & SCIENCE",
+     },{ 
+       titlename:"BUSINESS",
+     },{
+       titlename:"EDUCATION",
+     }],
+    menu:[{
+      Key: 1,
+      title:"ARTS & SCIENCE",
+      submenu:[{
+        name:"Data Science",
+        link:"",
+      },{
+        name:"Emerging Media",
+        link:"",
+      },{
+        name:"Forensic Pattern Analysis",
+        link:"",
+      },{
+        name:"Biological Forensics",
+        link:"",
+      },{
+        name:"Psychology",
+        link:"",
+      },{
+        name:"Speech-Language Pathology ",
+        link:"",
+      },{
+        name:"Theology",
+        link:"",
+      }]
+      
+      
+    },{
+      key:2,
+      title:"BUSINESS",
+      submenu:[{
+        name:"Professional's MBA",
+        link:"",
+      },{
+        name:"Emerging Leaders MBA",
+        link:"",
+      },{
+        name:"Master of Accounting(MAcc)",
+        link:"",
+      }]
+    },{
+      key:3,
+      title:"EDUCATION",
+      submenu:[{
+        name:"Curriculum and Instruction for Social Justice",
+        link:"",
+      },{
+        name:"Educational Technology",
+        link:"",
+      },{
+        name:"Literacy/Reading",
+        link:"",
+      },{
+        name:"Montessori Education",
+        link:"",
+      },{
+        name:"English For Speakers of Other Language(ESOL)",
+        link:"",
+      }]
+    },{
+      key:4,
+      title:"         ",
+      submenu:[{
+        name:"Educational Leadership",
+        link:"",
+      },{
+        name:"Kodaly Music Education",
+        link:"",
+      },{
+        name:"Master of Arts in Teaching(MAT)",
+        link:"",
+      },{
+        name:"School Counseling",
+        link:"",
+      }]
+    }],
+  },{
+    key: 3,
+    header:"CONTINUING EDUCATION",
+    title1:[{
+      titlename:"COURSE TOPICS",
+    }],
+    menu:[{
+      key:1,
+      title:"COURSE TOPICS",
+      submenu:[{
+        name:"Artificial Intellegience",
+        link:"",
+      },{
+        name:"Cybersecurity and CISSP",
+        link:"",
+      },{
+        name:"Emerging Technologies",
+        link:"",
+      },{
+        name:"Human Resources",
+        link:"",
+      },{
+        name:"Management Practices",
+        link:"",
+      },{
+        name:"Operations and Logistics",
+        link:"",
+      },{
+        name:"Software and Applications",
+        link:"",
+      }]
+    },{
+      title:"",
+      submenu:[{
+        name:"Career Building",
+        link:"",
+      },{
+        name:"Data Analytics and Management",
+        link:"",
+      },{
+        name:"Finance and Accounting",
+        link:"",
+      },{
+        name:"Innovation and Entrepreneurship",
+        link:"",
+      },{
+        name:"Manufacturing",
+        link:"",
+      },{
+        name:"PreK-12 Teaching Methods and Management",
+        link:"",
+      },{
+        name:"Sustainability",
+        link:"",
+      }]
+
+    },{
+      title:"",
+      submenu:[{
+        name:"Communications",
+        link:"",
+      },{
+        name:"Diversity, Equity, Inclusion, and Justice",
+        link:"",
+      },{
+        name:"Fitness and Wellness",
+        link:"",
+      },{
+        name:"Leadership Development",
+        link:"",
+      },{
+        name:"Marketing and Sales",
+        link:"",
+      },{
+        name:"Programming",
+        link:"",
+      },{
+        name:"Test Prep",
+        link:"",
+      }]
+      
+    },{
+      title:"",
+      submenu:[{
+        name:"Construction and Residential",
+        link:"",
+      },{
+        name:"Educational Leadership",
+        link:"",
+      },{
+        name:"Graphic Design",
+        link:"",
+      },{
+        name:"Learning Online",
+        link:"",
+      },{
+        name:"Nonprofit Management",
+        link:"",
+      },{
+        name:"Project Management and Agile",
+        link:"",
+      },{
+        name:"Web Design",
+        link:"",
+      }]
+    }]
+  }]
+
+  const cardData: any = [
+    {
+    key:1,
+    link:"#",
+    cardcont:{
+    image:"https://cdn.loyola.edu/project/core/extensions/institutional/home/images/student-calc-min.jpg",
+    icon: <BookCopy /> ,
+    header:"ACADEMIC RIGOR & EXCELLENCE",
+    body:"No matter what you study, the future demands both depth of knowledge and breadth of experience. So does Loyola.",
+    footer:"EXPLORE ACADEMICS AT LOYOLA",
+    }
+  },{
+    key:2,
+    link:"#",
+    cardcont:{
+    image:"https://cdn.loyola.edu/project/core/extensions/institutional/home/images/classroom-min.jpg",
+    icon: <BookCopy /> ,
+    header:"ADVISING & MENTORSHIP",
+    body:"Loyola students are individually taught and taught as individuals. Deep, meaningful, and sustained mentorship and guidance are the anchor of a Loyola education.",
+    footer:"EXPLORE ADVISING & MENTORSHIP",
+    }
+  },{
+    key:3,
+    link:"#",
+    cardcont:{
+    image:"https://cdn.loyola.edu/project/core/extensions/institutional/home/images/presentation-min.jpg",
+    icon: <BookCopy /> ,
+    header:"CAREER PREPARATION",
+    body:"Discover and forge paths that connect your passions and your values to your talents and professional aspirations.",
+    footer:"EXPLORE LOYOLA'S CAREER CENTER ",
+  }
+  }
+]
+
+const cardData1: any = [
+  {
+  key:1,
+  link:"#",
+  cardcont:{
+  image:"https://cdn.loyola.edu/project/core/extensions/institutional/home/images/presentation2-min.jpg",
+  icon: "" ,
+  header:"INNOVATION & ENTREPRENEUR- SHIP",
+  body:"Loyola is committed to supporting and growing a thriving entrepreneurial ecosystem for our university and our city through academic offerings, dedicated programs and resources for students, and our Nick and Susie Simon Center for Innovation & Entrepreneurship.",
+  footer:"EXPLORE INNOVATION & ENTREPRENEURSHIP",
+  }
+},{
+  key:2,
+  link:"#",
+  cardcont:{
+  image:"https://cdn.loyola.edu/project/core/extensions/institutional/home/images/baltimore-min.jpg",
+  header:"ANCHORED IN BALTIMORE",
+  body:"Loyola University Maryland attracts students who are also attracted to Baltimore: individuals eager to shape their lives—and their city—according to their ideals. Our city provides the ideal extended classroom for Loyola’s exceptional Jesuit liberal arts education.",
+  footer:"EXPLORE BALTIMORE",
+  }
+},{
+  key:3,
+  link:"#",
+  cardcont:{
+  image:"https://cdn.loyola.edu/project/core/extensions/institutional/home/images/students-lunch-min.jpg",
+  header:"DIVERSITY, EQUITY & INCLUSION",
+  body:"We are steadfastly committed to the well-being and success of all members of our campus community. This includes a strong and active commitment to promoting—and celebrating—diversity, equity, and inclusion, so that all persons at Loyola feel a sense of belonging and value.",
+  footer:"EXPLORE LOYOLA'S COMMITMENT ",
+}
+}
+]
+
+
+  const percentageCard: any = [{
+    key:1,
+    head:"TOP 2%",
+    body:"in the nation for long-term return on investment out of 4,500 universities",
+  },{
+    key:2,
+    head:"99%",
+    body:"of Loyola graduates are employed, in graduate or professional school, or participating in a year of service within 6-9 months of graduation",
+  },{
+    key:3,
+    head:"TOP 2%",
+    body:"for economic value added to the mid-career salary of alumni by the Brookings Institution",
+  }
+]
+  
+  
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="relative  ">
+      {/* Video */}
+      <div className="relative w-[100%]  sm:w-[100%]  md:h-[51rem]  sm:h-[40rem]">
+        <BgVideo/>
+        {/* navbar */}
+        <div className="absolute top-2 left-0 right-0">
+          <Nvbr />
         </div>
+
+        {/* colordiv */}
+        <div className="absolute top-0 left-0 right-0 w-[100%] sm:h-[1%] bg-emerald-600 " > </div>
+
+
+        <div className="absolute top-[10rem] left-[calc(50%-6rem)] h-42 w-[15rem]" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+          <JSIcon />
+          <Link
+            href='/app'
+            target='_blank'
+            className={cn(buttonVariants({
+              variant: 'text1',
+              size: 'xlg',
+            }), 'absolute top-5 left-[calc(50%-2.5rem)] right-0')}
+          >
+            <span className="default-text text-4xl leading-8 font-black " >
+              {isHovered ? '' : 'MORE THAN READY'}
+            </span>
+            <span className="default-text  text-3xl leading-6 font-black " >
+              {isHovered ? 'DISCOVER THE LOYOLA DIFFERENCE' : ''}
+            </span>
+            </Link>
+
+            <div className="">
+            <span className="absolute top-[12rem] mr-10 mx-auto left-[calc(50%-0.75rem)] text-center h-[4rem] w-[10rem] text-3xl text-emerald-500 animate-bounce delay-150 " onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+              {isHovered ? <MoveDown/> :'' }
+            </span>
+
+            <div className="absolute top-[12rem]  left-[calc(33%)]  h-52 w-[10rem] text-emerald-500">
+            <span >
+              {isHovered ? '':'SINCE 1852' }
+            </span>
+            </div>
+
+            </div>  
+            
+        </div>
+
+        {/* colordiv */}
+        {/* <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[12rem] bg-emerald-800 opacity-10 animate-bounce spin-in-6 duration-1000 " > </div>
+        <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[11rem] bg-emerald-800 opacity-20 animate-bounce spin-in-6" > </div>
+        <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[10rem] bg-emerald-950 opacity-50 animate-bounce spin-in-6" > </div>
+
+
+        <div className="absolute -skew-y-3  bottom-0 left-0 right-0 w-full h-[12rem] bg-emerald-800 opacity-10 animate-bounce spin-out-6" > </div>
+        <div className="absolute -skew-y-3 bottom-0 left-0 right-0 w-full h-[11rem] bg-emerald-800 opacity-30 animate-bounce spin-out-6" > </div>
+        <div className="absolute -skew-y-3 bottom-0 left-0 right-0 w-full h-[10rem] bg-emerald-950 opacity-50 animate-bounce spin-out-6" > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[9rem] bg-emerald-950 opacity-50 animate-bounce" > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[7rem] bg-emerald-950 opacity-60 animate-bounce " > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[5rem] bg-emerald-950  " > </div> */}
+
+
+        {/* <div className='mx-[15%] mb-32 mt-16 max-w-5xl sm:mt-[2rem] '>
+          <NewsCard/>
+          </div> */}
+      
+
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+     
+        
+        
+          <div className=" "> 
+          {/* {menuData.map((data: any) => {
+              return (         
+            <div className=" " key={data.key}>
+            <FutureGreyhounds data={data} />       
+          </div>
+            )
+          })} */}
+          <FutureGreyhounds data={menuData} />
+          
+      
+        </div> 
+   
+
+
+
+      <div className=" relative bg-slate-100     w-full ">
+      <div className=" border-b-[4px]  border-double border-y-8 border-slate-200" />
+      <div className=" border-b-[4px]  border-double border-y-8 border-slate-200" />
+      <div className=" border-b-[4px]  border-double border-y-8 border-slate-200" />
+      <div className=" border-b-[4px]  border-double border-y-8 border-slate-200" />
+      <div className=" border-b-[4px]  border-double border-y-8 border-slate-200" />
+    
+     
+                
+        <div className="flex mt-[6rem] ">
+        <div>
+        <LoyolaDifference/>
+        </div>
+        
+
+        </div>
+
+        {/* colordiv */}
+        {/* <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[16rem] bg-emerald-800 opacity-10 animate-spin spin-in-6 duration-1000 " > </div>
+        <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[13rem] bg-emerald-800 opacity-20 animate-spin spin-in-6" > </div>
+        <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[11rem] bg-emerald-950 opacity-35 animate-spin spin-in-6" > </div>
+
+
+        <div className="absolute -skew-y-3  bottom-0 left-0 right-0 w-full h-[16rem] bg-emerald-800 opacity-10 animate-spin spin-out-6" > </div>
+        <div className="absolute -skew-y-3 bottom-0 left-0 right-0 w-full h-[13rem] bg-emerald-800 opacity-20 animate-spin spin-out-6" > </div>
+        <div className="absolute -skew-y-3 bottom-0 left-0 right-0 w-full h-[11rem] bg-emerald-950 opacity-35 animate-spin spin-out-6" > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[9rem] bg-emerald-950 opacity-50 animate-bounce" > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[7rem] bg-emerald-950 opacity-60 animate-bounce " > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[4rem] bg-emerald-950  " > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[4rem] bg-emerald-950 " > </div> */}
+
+
+        <div className=" relative  " >
+          {/* {percentageCard.map((data: any)=>{
+            return(
+              <div className="" key={data.key}>
+
+              <PercentageCard data={data}/>
+
+
+              </div>
+            )
+          })} */}
+           <PercentageCard data={percentageCard}/>
+        
+       </div>
+
+       </div>
+
+
+       <div className=" grid grid-cols-1 md:grid-cols-1  lg:grid-cols-3  gap-4 bg-emerald-950 pt-[8rem]  pb-[7rem] px-[8%] ">
+        {cardData.map((data: any) => {
+            return (     
+              <Link  href="#" >
+                  
+              <div className="  lg:h-[35rem]  " key={data.key}>
+                
+                <CardView data={data.cardcont}  /> 
+                
+              </div>
+              </Link>    
+          )
+          
+        })}
+          
+      
+        
+  
+       </div>
+
+       <div className="relative  bg-slate-400 w-full h-[60rem]">
+        <div className="absolute bg-transparent w-full h-[50rem]">
+
+          <div className="absolute ml-[9rem] mt-[9rem] ">
+
+            <CardViewOne/>
+
+          </div>
+
+        </div>
+       </div>
+      <div>
+           <StudentVoice/>
       </div>
+       
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+       <div className="grid grid-cols-1 md:grid-cols-1  lg:grid-cols-3  gap-4 bg-emerald-950 pt-[8rem]  pb-[7rem] px-[8%] ">
+       {cardData1.map((data: any) => {
+            return (     
+              <Link  href="#" >
+                  
+              <div className=" lg:h-[40rem] " key={data.key}>
+                
+                <CardView data={data.cardcont}  /> 
+                
+              </div>
+              </Link>    
+          )
+        })}
+  
+       </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+       <div className="relative ">
+        <ReadytoLearn/>
+       </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+
+
+
+       
     </main>
   );
+ 
+  
+  
 }
