@@ -15,16 +15,42 @@ import CardView from "@/components/accadamics/CardView";
 import CardViewOne from "@/components/CardViewOne";
 import StudentVoice from "@/components/accadamics/StudentVoice";
 import ReadytoLearn from "@/components/accadamics/ReadytoLearn";
-import { REM } from "next/font/google";
 import NewsCard from "@/components/accadamics/NewsCard";
 import BgVideo from "@/components/accadamics/BgVideo";
 import FutureGreyhounds from "@/components/FutureGreyhounds";
+import Nav from "@/components/Nav";
+
 
 
 
 
 export default function Home(): JSX.Element {
+  const[nav,setNav]=useState(false)
+  const openNav =()=>setNav(true)
   const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const newsCard: any = [{
+    key:1,
+    link:"#",
+    header:"News",
+    body:"Loyola celebrates the life of the Rev. Frank Haig, S.J., professor emeritus of physics",
+
+  },
+  {
+    key:2,
+    link:"#",
+    header:"News",
+    body:"Loyola launches new strategic plan, Together We Rise",
+
+  },
+  {
+    key:3,
+    link:"#",
+    header:"News",
+    body:"Loyola’s Baltipreneurs Accelerator Demo Day showcases local entrepreneurs",
+   
+  }
+]
 
   const menuData: any = [{
     key: 1,
@@ -395,14 +421,16 @@ const cardData1: any = [
         <BgVideo/>
         {/* navbar */}
         <div className="absolute top-2 left-0 right-0">
-          <Nvbr />
+          {/* <Nvbr /> */}
+          <Nav openNav={openNav} />
+          
         </div>
 
         {/* colordiv */}
         <div className="absolute top-0 left-0 right-0 w-[100%] sm:h-[1%] bg-emerald-600 " > </div>
 
 
-        <div className="absolute top-[10rem] left-[calc(50%-6rem)] h-42 w-[15rem]" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+        <div className="absolute lg:top-[20%] md:top-[20%]  top-[25%]  left-[calc(50%-6rem)]  lg:w-[16rem] md:w-[15rem] sm:w-[13rem] w-[10rem]" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
           <JSIcon />
           <Link
             href='/app'
@@ -410,51 +438,66 @@ const cardData1: any = [
             className={cn(buttonVariants({
               variant: 'text1',
               size: 'xlg',
-            }), 'absolute top-5 left-[calc(50%-2.5rem)] right-0')}
+            }), 'absolute top-[5%] left-[calc(50%-2.5rem)] right-0')}
           >
             <span className="default-text text-4xl leading-8 font-black " >
               {isHovered ? '' : 'MORE THAN READY'}
             </span>
-            <span className="default-text  text-3xl leading-6 font-black " >
+            <span className="default-text  lg:text-3xl md:text-3xl text-2xl leading-6 font-black " >
               {isHovered ? 'DISCOVER THE LOYOLA DIFFERENCE' : ''}
             </span>
             </Link>
 
             <div className="">
-            <span className="absolute top-[12rem] mr-10 mx-auto left-[calc(50%-0.75rem)] text-center h-[4rem] w-[10rem] text-3xl text-emerald-500 animate-bounce delay-150 " onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+            <span className="absolute lg:top-[16rem] md:top-[15rem] top-[10rem] mr-10 mx-auto left-[calc(50%-0.75rem)] text-center h-[4rem] w-[10rem] text-3xl text-emerald-500 animate-bounce delay-150 " onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
               {isHovered ? <MoveDown/> :'' }
             </span>
 
-            <div className="absolute top-[12rem]  left-[calc(33%)]  h-52 w-[10rem] text-emerald-500">
+            <div className="absolute top-[70%]  lg:left-[calc(30%)] md:left-[calc(30%)] left-[calc(25%)] h-52 w-[10rem] text-emerald-500">
             <span >
               {isHovered ? '':'SINCE 1852' }
             </span>
             </div>
 
-            </div>  
+            </div> 
+            
+             
             
         </div>
+        
 
         {/* colordiv */}
-        {/* <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[12rem] bg-emerald-800 opacity-10 animate-bounce spin-in-6 duration-1000 " > </div>
-        <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[11rem] bg-emerald-800 opacity-20 animate-bounce spin-in-6" > </div>
-        <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[10rem] bg-emerald-950 opacity-50 animate-bounce spin-in-6" > </div>
+        <div className=" lg:flex md:flex hidden">
+          
+        
 
+        {/* <div className="absolute skew-y-3 bottom-10 left-0 right-0 w-full h-[16rem] bg-emerald-800 opacity-10 animate-spin  spin-in-6 duration-5000 " > </div> */}
+        <div className="absolute skew-y-3 bottom-10 left-0 right-0 w-full h-[13rem] bg-[#0d4b34] opacity-20 animate-spin spin-in-6 duration-5000" > </div>
+        <div className="absolute skew-y-3 bottom-10 left-0 right-0 w-full h-[11rem] bg-[#0d4b34] opacity-35 animate-spin spin-in-6 duration-5000" > </div>
+        <div className="absolute bottom-2 left-0 right-0 w-full h-[12rem] bg-[#0d4b34] opacity-50  animate-bounce" > </div>
+        <div className="absolute bottom-2 left-0 right-0 w-full h-[12rem] bg-[#0d4b34] opacity-50  animate-bounce" > </div>
 
-        <div className="absolute -skew-y-3  bottom-0 left-0 right-0 w-full h-[12rem] bg-emerald-800 opacity-10 animate-bounce spin-out-6" > </div>
-        <div className="absolute -skew-y-3 bottom-0 left-0 right-0 w-full h-[11rem] bg-emerald-800 opacity-30 animate-bounce spin-out-6" > </div>
-        <div className="absolute -skew-y-3 bottom-0 left-0 right-0 w-full h-[10rem] bg-emerald-950 opacity-50 animate-bounce spin-out-6" > </div>
-        <div className="absolute bottom-0 left-0 right-0 w-full h-[9rem] bg-emerald-950 opacity-50 animate-bounce" > </div>
-        <div className="absolute bottom-0 left-0 right-0 w-full h-[7rem] bg-emerald-950 opacity-60 animate-bounce " > </div>
-        <div className="absolute bottom-0 left-0 right-0 w-full h-[5rem] bg-emerald-950  " > </div> */}
+        {/* <div className="absolute -skew-y-3  bottom-10 left-0 right-0 w-full h-[16rem] bg-emerald-800 opacity-10 animate-spin spin-out-6 duration-5000" > </div> */}
+        <div className="absolute -skew-y-3 bottom-10 left-0 right-0 w-full h-[13rem] bg-[#0d4b34] opacity-20 animate-spin spin-out-6 duration-5000" > </div>
+        <div className="absolute -skew-y-3 bottom-10 left-0 right-0 w-full h-[11rem] bg-[#0d4b34] opacity-35 animate-spin spin-out-6 duration-5000" > </div>
+        <div className="absolute bottom-2 left-0 right-0 w-full h-[10rem] bg-[#0d4b34] opacity-50  animate-bounce" > </div>
+        <div className="absolute bottom-2 left-0 right-0 w-full h-[9.5rem] bg-[#0d4b34] opacity-60   " > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[9rem] bg-[#0d4b34]  " > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[6rem] bg-[#0d4b34] " > </div>
 
+        </div>
 
-        {/* <div className='mx-[15%] mb-32 mt-16 max-w-5xl sm:mt-[2rem] '>
-          <NewsCard/>
-          </div> */}
+        <div className='lg:flex md:flex hidden absolute top-[60%]  lg:mx-[10%] md:mx-[5%] sm:mx-[5%]  mt-16 lg:max-w-6xl md:w-[90%] sm:w-[90%] w-[90%] sm:mt-[2rem]  '>
+          <NewsCard data={newsCard}/>
+          </div>
+
+        
       
 
       </div>
+      <div className='lg:hidden md:hidden sm:flex  top-[60%] bottom-0 lg:mx-[10%] md:mx-[5%] sm:mx-[5%] mx-[5%]  mt-16 lg:max-w-6xl md:w-[90%] sm:w-[90%] w-[90%] sm:mt-[2rem]  '>
+          <NewsCard data={newsCard}/>
+          </div>
 
      
         
@@ -493,18 +536,19 @@ const cardData1: any = [
         </div>
 
         {/* colordiv */}
-        {/* <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[16rem] bg-emerald-800 opacity-10 animate-spin spin-in-6 duration-1000 " > </div>
-        <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[13rem] bg-emerald-800 opacity-20 animate-spin spin-in-6" > </div>
-        <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[11rem] bg-emerald-950 opacity-35 animate-spin spin-in-6" > </div>
+        <div className="absolute skew-y-3 bottom-10 left-0 right-0 w-full h-[16rem] bg-emerald-800 opacity-10 animate-spin  spin-in-6 duration-5000 " > </div>
+        <div className="absolute skew-y-3 bottom-10 left-0 right-0 w-full h-[13rem] bg-emerald-800 opacity-20 animate-spin spin-in-6 duration-5000" > </div>
+        <div className="absolute skew-y-3 bottom-10 left-0 right-0 w-full h-[11rem] bg-emerald-950 opacity-35 animate-spin spin-in-6 duration-5000" > </div>
+        <div className="absolute bottom-2 left-0 right-0 w-full h-[12rem] bg-emerald-950 opacity-50  animate-bounce" > </div>
+        <div className="absolute bottom-2 left-0 right-0 w-full h-[12rem] bg-emerald-950 opacity-50  animate-bounce" > </div>
 
-
-        <div className="absolute -skew-y-3  bottom-0 left-0 right-0 w-full h-[16rem] bg-emerald-800 opacity-10 animate-spin spin-out-6" > </div>
-        <div className="absolute -skew-y-3 bottom-0 left-0 right-0 w-full h-[13rem] bg-emerald-800 opacity-20 animate-spin spin-out-6" > </div>
-        <div className="absolute -skew-y-3 bottom-0 left-0 right-0 w-full h-[11rem] bg-emerald-950 opacity-35 animate-spin spin-out-6" > </div>
-        <div className="absolute bottom-0 left-0 right-0 w-full h-[9rem] bg-emerald-950 opacity-50 animate-bounce" > </div>
-        <div className="absolute bottom-0 left-0 right-0 w-full h-[7rem] bg-emerald-950 opacity-60 animate-bounce " > </div>
-        <div className="absolute bottom-0 left-0 right-0 w-full h-[4rem] bg-emerald-950  " > </div>
-        <div className="absolute bottom-0 left-0 right-0 w-full h-[4rem] bg-emerald-950 " > </div> */}
+        <div className="absolute -skew-y-3  bottom-10 left-0 right-0 w-full h-[16rem] bg-emerald-800 opacity-10 animate-spin spin-out-6 duration-5000" > </div>
+        <div className="absolute -skew-y-3 bottom-10 left-0 right-0 w-full h-[13rem] bg-emerald-800 opacity-20 animate-spin spin-out-6 duration-5000" > </div>
+        <div className="absolute -skew-y-3 bottom-10 left-0 right-0 w-full h-[11rem] bg-emerald-950 opacity-35 animate-spin spin-out-6 duration-5000" > </div>
+        <div className="absolute bottom-2 left-0 right-0 w-full h-[10rem] bg-emerald-950 opacity-50  animate-bounce" > </div>
+        <div className="absolute bottom-2 left-0 right-0 w-full h-[9.5rem] bg-emerald-950 opacity-60   " > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[9rem] bg-emerald-950  " > </div>
+        <div className="absolute bottom-0 left-0 right-0 w-full h-[6rem] bg-emerald-950 " > </div>
 
 
         <div className=" relative  " >
@@ -544,11 +588,11 @@ const cardData1: any = [
         
   
        </div>
-
+{/* greyhound nation  */}
        <div className="relative  bg-slate-400 w-full h-[60rem]">
-        <div className="absolute bg-transparent w-full h-[50rem]">
+        <div className="absolute bg-transparent left-0 w-full h-[50rem]">
 
-          <div className="absolute ml-[9rem] mt-[9rem] ">
+          <div className="absolute mx-[9%] mt-[9%] ">
 
             <CardViewOne/>
 

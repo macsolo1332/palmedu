@@ -34,9 +34,9 @@ const PercentageCard=(props: any)=>{
 
           </div>
 
-          <ol className='my-8  space-y-2  pb-[2rem]  md:flex md:space-x-0 md:space-y-0'>
-    <li className=' ml-[6rem] mr-[2rem]'>
-    <div className='     md:pb-0 md:pl-2 md:pt-0'>
+          <ol className='my-8    pb-[2rem]  md:flex md:space-x-0 space-y-0'>
+    <li className=' ml-[6%] mr-[2%]'>
+    <div className='     pb-0 pl-2 pt-0'>
         <div className=' justify-center bg-emerald-900 rounded-full text-primary-foreground h-10 w-10  px-2 py-2' >
         <LinkIcon/>
         </div>
@@ -52,7 +52,7 @@ const PercentageCard=(props: any)=>{
       
       </li>
       <li className='ml-[2rem] mr-[2rem] '>
-    <div className='  border-zinc-300 py-1 pl-4 pt-[30rem] md:border-l-2  md:pb-0 md:pl-4 md:pt-1'>
+    <div className='  border-zinc-300 py-1 pl-4  md:border-l-2  md:pb-0 md:pl-4 md:pt-1'>
         <span  className='text-sm font-semibold w-[6rem]  text-green-900 underline-offset-1 hover:underline decoration-[1.5px] '>
           <a href="/app">Discover the endless potential for Loyola graduates</a>
         </span>

@@ -18,7 +18,7 @@ const LoyolaDifference =()=>{
           
         </div>
 
-        <div className="  w-[28.5rem] tracking-tight subpixel-antialiased ">
+        <div className="  w-[80.5%] tracking-tight subpixel-antialiased ">
             <p> We believe a Jesuit education acquired at Loyola University 
                 Maryland best prepares you for academic achievement, the new
                  world of work, and a balanced, flourishing, and purposeful life.
@@ -42,7 +42,7 @@ const LoyolaDifference =()=>{
         </div>
 
     </div>
-    <div>
+    <div className="w-[95%] h-[95%]">
         <FourImageGallery/>
     </div>
 

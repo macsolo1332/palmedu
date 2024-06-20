@@ -39,13 +39,13 @@ const DropdownDiv = (props: any) => {
                 className={buttonVariants({
                   size: "ssm",
                   variant: "backbutton",
-                  className: "mt-2 lg:w-[4.1rem] lg:h-[3.9rem] md:w-[3.1rem] md:h-[2.9rem] sm:w-[2.1rem] sm:h-[1.9rem]  rounded-full ml-[8%]",
+                  className: "mt-2 lg:w-[4.1rem] lg:h-[3.9rem] md:w-[3.1rem] md:h-[2.9rem] sm:w-[3.1rem] sm:h-[3.1rem] w-[3.1rem] h-[3.1rem]   rounded-full ml-[8%]",
                 })}
                 onClick={toggleDropdownOpen}
               >
                 <ChevronLeft />
               </div>
-              <div className="ml-5 w-[10rem]">{header} </div>
+              <div className="ml-5 w-[50%]  lg:text-6xl md:text-5xl text-3xl ">{header} </div>
             </div>
       
             

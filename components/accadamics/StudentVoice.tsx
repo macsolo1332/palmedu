@@ -11,7 +11,7 @@ const StudentVoice=()=>{
         {/* <div className="absolute pb-0   bottom-0 left-0 right-0 w-[50rem] h-[30rem] bg-emerald-800 opacity-10  rotate-45" > </div> */}
 {/* <div className=" max-w-full "> */}
 
-<div className=" rounded-full border-spacing-3 justify-items-center  py-[4rem] item-center md:mx-[35%]    "> 
+<div className=" rounded-full border-spacing-3 justify-items-center  py-[4rem] item-center mx-[35%]    "> 
 
 <img src="https://cdn.loyola.edu/project/core/extensions/institutional/home/images/amber-d-sm-min.jpg"
  alt=""
@@ -21,7 +21,7 @@ const StudentVoice=()=>{
  className=" align-middle  justify-center rounded-full   md:w-[20rem]  sm:mx-4 "  />
 </div>
 
-<div className="   text-[1.2rem] text-slate-50 tracking-tight subpixel-antialiased  mb-10">
+<div className=" mx-[5%]  text-[1.2rem] text-slate-50 tracking-tight subpixel-antialiased  mb-10">
     <p className="text-center justify-center item-center"> <span className="font-bold text-emerald-600">AMBER, ’22,</span> ENGLISH/COMMUNICATION INTERDICIPLINARY MAJOR, WRITING MINOR</p>
 </div>
     

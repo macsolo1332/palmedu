@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const FourImageGallery = ()=>{
     return(
-        <div className="  lg:h-[100%] md:h-[100%] sm:h-[100%] h-[100%] lg:w-[100%]  md:w-[100%] sm:w-[100%] w-[100%] bg-slate-900">
+        <div className="  lg:h-[100%] md:h-[100%] sm:h-[100%] h-[100%] lg:w-[100%]  md:w-[100%] sm:w-[100%] w-[100%] bg-slate-100">
             <div className=" flex h-[50%] w-[100%]">
                 <div className="mt-3 ml-3">
                 <Image

@@ -34,7 +34,7 @@ const buttonVariants = cva(
         ssm:"h-[4rem] w-[4rem] text-2xl  font-bold subpixel-antialiased ",
         sm: "h-12 font-medium  text-left px-10",
         mm:"h-12 font-semibold  text-left px-10",
-        lg: "h-16 rounded-full tracking-tighter text-lg font-bold px-6 ",
+        lg: "lg:h-16  md:h-16 h-12   rounded-full tracking-tighter text-lg font-bold px-6  ",
         xlg:'h-30 w-8 mt-8 tracking-tighter font-extrabold  text-4xl text-center leading-8 px-10',
         xxlg:'h-30 w-8 ml-10 rounded-none tracking-tighter font-bold  leading-6 text-2xl text-left px-10',
         icon: "h-10 w-10 mb-12vh",
