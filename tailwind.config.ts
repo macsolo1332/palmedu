@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        primary: ['Barlow+Condensed'],
+        primary1:['Archivo+Narrow'],
+        primary2:['BenchNine'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

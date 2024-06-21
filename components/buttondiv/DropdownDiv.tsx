@@ -20,7 +20,7 @@ const DropdownDiv = (props: any) => {
       {!isOpen && (
         <div
         className=
-           "lg:mt-4 lg:w-[110%] w-full md:w-full  sm:w-full    lg:h-[6.5rem] md:h-[6rem] sm:h-[6rem] h-[6rem] ml-10 rounded-none tracking-tighter  font-bold  leading-6 text-2xl text-left px-10 justify-center bg-[#0d4b34] text-primary-foreground hover:bg-[#0c432f] border-4 border-[#209765] inline-flex items-center"
+           "lg:mt-4 xl:w-[100%]   lg:w-[110%] w-full   xl:h-[7rem]  lg:h-[6.5rem] md:h-[6rem] sm:h-[6rem] h-[7rem]  rounded-none tracking-tighter  font-bold  leading-6 text-2xl text-left px-11 justify-center bg-[#0d4b34] text-primary-foreground hover:bg-[#0c432f] border-4 border-[#209765] inline-flex items-center"
         
         
         onClick={toggleDropdownOpen} 

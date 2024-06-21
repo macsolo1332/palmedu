@@ -430,7 +430,7 @@ const cardData1: any = [
         <div className="absolute top-0 left-0 right-0 w-[100%] sm:h-[1%] bg-emerald-600 " > </div>
 
 
-        <div className="absolute lg:top-[20%] md:top-[20%]  top-[25%]  left-[calc(50%-6rem)]  lg:w-[16rem] md:w-[15rem] sm:w-[13rem] w-[10rem]" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+        <div className="absolute 2xl:top-[20%] xl:top-[20%]  lg:top-[20%] md:top-[20%]  top-[25%]  left-[calc(50%-6rem)]  lg:w-[16rem] md:w-[15rem] sm:w-[13rem] w-[10rem]" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
           <JSIcon />
           <Link
             href='/app'
@@ -467,13 +467,13 @@ const cardData1: any = [
         
 
         {/* colordiv */}
-        <div className=" lg:flex md:flex hidden">
+        <div className=" bottom-0 2xl:flex xl:flex  lg:flex md:flex hidden">
           
         
 
         {/* <div className="absolute skew-y-3 bottom-10 left-0 right-0 w-full h-[16rem] bg-emerald-800 opacity-10 animate-spin  spin-in-6 duration-5000 " > </div> */}
-        <div className="absolute skew-y-3 bottom-10 left-0 right-0 w-full h-[13rem] bg-[#0d4b34] opacity-20 animate-spin spin-in-6 duration-5000" > </div>
-        <div className="absolute skew-y-3 bottom-10 left-0 right-0 w-full h-[11rem] bg-[#0d4b34] opacity-35 animate-spin spin-in-6 duration-5000" > </div>
+        <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[13rem] bg-[#0d4b34] opacity-20 animate-spin spin-in-6 duration-5000" > </div>
+        <div className="absolute skew-y-3 bottom-0 left-0 right-0 w-full h-[11rem] bg-[#0d4b34] opacity-35 animate-spin spin-in-6 duration-5000" > </div>
         <div className="absolute bottom-2 left-0 right-0 w-full h-[12rem] bg-[#0d4b34] opacity-50  animate-bounce" > </div>
         <div className="absolute bottom-2 left-0 right-0 w-full h-[12rem] bg-[#0d4b34] opacity-50  animate-bounce" > </div>
 
@@ -487,7 +487,7 @@ const cardData1: any = [
 
         </div>
 
-        <div className='lg:flex md:flex hidden absolute top-[60%]  lg:mx-[10%] md:mx-[5%] sm:mx-[5%]  mt-16 lg:max-w-6xl md:w-[90%] sm:w-[90%] w-[90%] sm:mt-[2rem]  '>
+        <div className=' xl:flex 2xl:flex lg:flex md:flex hidden absolute top-[60%] 2xl:mx-[15%] xl:mx-[10%] lg:mx-[5%] md:mx-[5%] sm:mx-[5%]  mt-16 2xl:w-[100%]  lg:max-w-6xl md:w-[90%] sm:w-[90%] w-[90%] sm:mt-[2rem]  '>
           <NewsCard data={newsCard}/>
           </div>
 
@@ -502,7 +502,7 @@ const cardData1: any = [
      
         
         
-          <div className=" "> 
+          <div className="relative "> 
           {/* {menuData.map((data: any) => {
               return (         
             <div className=" " key={data.key}>

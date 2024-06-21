@@ -9,16 +9,16 @@ const LoyolaDifference =()=>{
     <div className=" w-[80%] pt-[2rem] mx-auto grid grid-cols-1 md:grid-cols-1  lg:grid-cols-2  gap-2">  
     <div className="relative  ">
 
-        <div  className=" flex w-[40%]  mb-[3rem] font-bold text-black  ">
+        <div  className=" flex w-[40%] font-primary1 mb-[1rem] font-bold text-black  ">
           THE LOYOLA DIFFERENCE
           <div className="text-emerald-600  "> <Kanban/> </div>
         </div>
-        <div  className="   w-[80%] mb-[3rem] font-bold text-5xl tracking-tighter leading-[2.75rem] text-emerald-800   ">
+        <div  className="   w-[90%] mb-[1rem] font-primary font-black font  text-5xl  leading-[2.75rem] text-emerald-800   ">
           MORE THAN READY. LOYOLA READY.
           
         </div>
 
-        <div className="  w-[80.5%] tracking-tight subpixel-antialiased ">
+        <div className="  w-[80.5%] font-primary1 text-xl tracking-tight leading-[2.3rem] subpixel-antialiased ">
             <p> We believe a Jesuit education acquired at Loyola University 
                 Maryland best prepares you for academic achievement, the new
                  world of work, and a balanced, flourishing, and purposeful life.
@@ -28,12 +28,12 @@ const LoyolaDifference =()=>{
                      for anything—and ready for everything.</p>
         </div>
 
-        <div className="  w-[28.5rem] mt-[4rem]   tracking-tight subpixel-antialiased">
+        <div className="  w-[61.5%] mt-[2rem]   tracking-tight subpixel-antialiased">
         <Link
                     className={buttonVariants({
                         size: 'mm',
                         variant:'simpleboxbutton',
-                        className:'transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300',
+                        className:'transition font-primary1 ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300',
                     })}
                     href='/app'
                     target='_blank'>
@@ -42,7 +42,7 @@ const LoyolaDifference =()=>{
         </div>
 
     </div>
-    <div className="w-[95%] h-[95%]">
+    <div className="w-[110%] h-[95%]">
         <FourImageGallery/>
     </div>
 

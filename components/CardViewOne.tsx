@@ -5,7 +5,7 @@ import { buttonVariants } from './ui/Button';
 export default function CardViewOne(): JSX.Element {
     const [isHovered, setIsHovered] = useState<boolean>(false);
     return (
-        <div className="lg:max-w-[60.5%] md:w-auto sm:w-auto h-auto mx-4  bg-white shadow-lg rounded-none overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl duration-500 " onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >
+        <div className="lg:max-w-[60.5%] md:w-full sm:w-full h-auto mx-4  bg-white shadow-lg rounded-none overflow-hidden transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl duration-500 " onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} >
             
             <div className=" my-[2rem] mx-[10%] border-b-[1px] border-opacity-25  border-slate-500">
                 <div className='flex   text-4xl    '>
@@ -18,7 +18,7 @@ export default function CardViewOne(): JSX.Element {
     
                 </div>
 
-                <div className=" font-extrabold text-emerald-900 tracking-tighter   lg:text-[4.5rem] md:text-[3.5rem] sm:text-[3.5rem] text-[3.5rem] leading-[4rem] w-[90%] border-b-8 border-slate-500 border-opacity-35  ">
+                <div className=" font-extrabold text-emerald-900 tracking-tighter   lg:text-5xl md:text-4xl sm:text-[4xl] text-[6xl] leading-[4rem] w-[90%] border-b-8 border-slate-500 border-opacity-35  ">
                     {''}GREYHOUND NATION
                     </div>
                     
@@ -26,7 +26,7 @@ export default function CardViewOne(): JSX.Element {
                 <p className="text-gray-700 text-base pt-[2rem] pb-[2rem] w-auto ">{''}Our diverse, vibrant, close-knit community. Our spirit,
                  traditions, and campus culture. All of these aspects define the Loyola experience.</p>
             </div>
-            <div className="flex lg:px-16 px-10 pb-10  ">
+            <div className="flex lg:px-16 px-10 pb-10  w-[100%] ">
                 <div className='justify-center bg-emerald-900 rounded-full text-primary-foreground  px-4 py-4' >
                         <Camera/>
 

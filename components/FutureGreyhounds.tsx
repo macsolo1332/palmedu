@@ -281,26 +281,26 @@ const menuData: any = [{
 const FutureGreyhounds=(props:any)=>{
     // const{Data }=props?.data;
     return(
-        <div className="pt-[2rem] pb-[8rem] bg-[#0d4b34] px-[10%] " >
+        <div className="pt-[2rem] pb-[8rem] bg-[#0d4b34] px-[10%] 2xl:px-[15%]" >
 
         
 
-        <div className="  " > 
-        <div  className="lg:flex md:flex "> 
         
-        <div  className=" flex  w-[20rem] lg:w-6 md:w-[20rem]  mb-4 font-bold text-white   ">
+        <div  className="lg:flex md:flex xl:flex 2xl:flex  "> 
+        
+        <div  className=" flex  2xl:w-[15rem] xl:w-[15rem] w-[15rem] lg:w-6 md:w-[20rem]  mb-4 font-bold text-white   ">
           FUTURE GREYHOUNDS
-          <div className="text-emerald-600 mt-0 lg:mt-6 md:mt-0 sm:mt-0 "> <Kanban/> </div>
+          <div className="text-emerald-600 2xl:mt-0 xl:mt-0 mt-0 lg:mt-6 md:mt-0 sm:mt-0 "> <Kanban/> </div>
           </div>
 
           
 
 
 
-          <div className=" lg:mt-[4rem] md:mt-[4rem] sm:mt-0 mt-0  ml-0  grid grid-cols-1 md:grid-cols-1  lg:grid-cols-3  gap-4  "> 
+          <div className="2xl:mt-[4rem] xl:mt-[4rem] lg:mt-[4rem] md:mt-[4rem] sm:mt-0 mt-0  ml-0   grid grid-cols-1 md:grid-cols-1  lg:grid-cols-3  gap-1  "> 
           {menuData.map((data: any) => {
               return (         
-            <div className="   pr-[2rem]   " key={data.key}>
+            <div className="   pr-[1.5rem] pb-[2rem]  " key={data.key}>
             <DropdownDiv data={data} />         
           </div>
             )
@@ -308,11 +308,11 @@ const FutureGreyhounds=(props:any)=>{
           
         </div>
 
-        <div className=" md:mx-[4rem] lg:mx-[4rem] mx-0 my-[3rem] lg:my-0 md:my-0  lg:border-l-8  md:border-l-8     border-slate-400">
+        <div className="  mx-0 my-[3rem] lg:my-0 md:my-0  lg:border-l-8  md:border-l-8     border-slate-400">
 
         <div className=" ml-[2rem] ">
 
-        <div  className=" flex   w-6  mb-4 font-bold text-white  ">
+        <div  className=" flex  2xl:w-[20rem] xl:w-[8rem] w-[20rem] lg:w-6 md:w-[8rem]  mb-4 font-bold text-white  ">
           CURRENT GREYHOUNDS
           <div className="text-emerald-600 mt-6 "> <Kanban/> </div>
           </div>
@@ -336,7 +336,6 @@ const FutureGreyhounds=(props:any)=>{
            
         
       
-      </div>
       </div>
     )
 

@@ -110,7 +110,7 @@ const NewsCard= (props: any)=>{
       <Card  className="    bg-slate-100  shadow-lg  h-full  w-full  " >
         
              
-      <div className="grid grid-cols-1  md:grid-cols-3  lg:grid-cols-3 mb-0  gap-2 shadow-lg  border-slate-400 ">
+      <div className="grid grid-cols-1  md:grid-cols-3  lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 mb-0  gap-2 shadow-lg  border-slate-400 ">
          
   {props.data.map((data: any)=>{
       return(

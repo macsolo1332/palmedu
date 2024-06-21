@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body  className={cn(
-            'min-h-screen font- antialiased grainy bg-[#0d4b34]',
+            'min-h-screen font-primary antialiased grainy bg-[#0d4b34]',
             inter.className
           )}>
        
