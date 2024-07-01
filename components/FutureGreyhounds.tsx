@@ -287,17 +287,14 @@ const FutureGreyhounds=(props:any)=>{
 
         
         <div  className="lg:flex md:flex xl:flex 2xl:flex  "> 
-        
+        <div>
         <div  className=" flex  2xl:w-[15rem] xl:w-[15rem] w-[15rem] lg:w-6 md:w-[20rem]  mb-4 font-bold text-white   ">
           FUTURE GREYHOUNDS
           <div className="text-emerald-600 2xl:mt-0 xl:mt-0 mt-0 lg:mt-6 md:mt-0 sm:mt-0 "> <Kanban/> </div>
+
+
           </div>
-
-          
-
-
-
-          <div className="2xl:mt-[4rem] xl:mt-[4rem] lg:mt-[4rem] md:mt-[4rem] sm:mt-0 mt-0  ml-0   grid grid-cols-1 md:grid-cols-1  lg:grid-cols-3  gap-1  "> 
+          <div className="sm:mt-0 mt-0  ml-0   grid grid-cols-1 md:grid-cols-1  lg:grid-cols-3  gap-1  "> 
           {menuData.map((data: any) => {
               return (         
             <div className="   pr-[1.5rem] pb-[2rem]  " key={data.key}>
@@ -307,6 +304,17 @@ const FutureGreyhounds=(props:any)=>{
           })}
           
         </div>
+
+
+
+        </div>
+       
+
+          
+
+
+
+          
 
         <div className="  mx-0 my-[3rem] lg:my-0 md:my-0  lg:border-l-8  md:border-l-8     border-slate-400">
 

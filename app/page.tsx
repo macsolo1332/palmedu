@@ -589,7 +589,7 @@ const cardData1: any = [
   
        </div>
 {/* greyhound nation  */}
-       <div className="relative  bg-slate-400 w-full h-[60rem]">
+       {/* <div className="relative  bg-slate-400 w-full h-[60rem]">
         <div className="absolute bg-transparent left-0 w-full h-[50rem]">
 
           <div className="absolute mx-[9%] mt-[9%] ">
@@ -599,7 +599,7 @@ const cardData1: any = [
           </div>
 
         </div>
-       </div>
+       </div> */}
       <div>
            <StudentVoice/>
       </div>
